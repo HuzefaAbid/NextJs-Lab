@@ -40,7 +40,7 @@ export async function getCart(): Promise<ICart | null> {
     return JSON.parse(JSON.stringify(cart));
   } catch (error) {
     console.error('Error fetching cart:', error);
-    return { items: [], totalAmount: 0 } as ICart;
+    return null;
   }
 }
 
